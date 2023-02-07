@@ -7,6 +7,7 @@
 #include "MyPawn.generated.h"
 
 UCLASS()
+
 class L230207_API AMyPawn : public APawn
 {
 	GENERATED_BODY()
@@ -25,5 +26,19 @@ public:
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+
+	class UBoxComponent* Box;
+
+	class UStaticMeshComponent* Body;
+
+	class UStaticMeshComponent* Left;
+
+	class UStaticMeshComponent* Right;
+
+	class USpringArmComponent* SpringArm;
+
+	class UCameraComponent* Camera;
+
+	class UFloatingPawnMovement* Movement;
 
 };
